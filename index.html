@@ -296,23 +296,24 @@
         <script>
             const btnYes = document.querySelector('.btn-yes');
             const btnNo = document.querySelector('.btn-no');
+
+             btnYes.addEventListener('click', function(){
+            alert('Terimakasih telah merekrut saya. Saya akan bekerja dengan profesional dan berintegritas.');
+            window.location.href = 'https://www.linkedin.com/in/rivaldojuandatampubolon'; 
+        });
+
+            btnNo.addEventListener('mouseover', function(){
+            const btnNo = this;
+            const maxX = window.innerWidth - btnNo.offsetWidth;
+            const maxY = window.innerHeight - btnNo.offsetHeight;
     
-            btnYes.addEventListener('click', function() {
-                alert('Terimakasih telah merekrut saya. Saya akan bekerja dengan profesional dan berintegritas.');
-            });
-    
-            btnNo.addEventListener('mouseover', function() {
-                const btnNo = this;
-                const maxX = window.innerWidth - btnNo.offsetWidth;
-                const maxY = window.innerHeight - btnNo.offsetHeight;
-            
-                const newX = Math.random() * maxX;
-                const newY = Math.random() * maxY;
-          
-                btnNo.style.position = 'absolute';
-                btnNo.style.left = `${newX}px`;
-                btnNo.style.top = `${newY}px`;
-            });
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+  
+            btnNo.style.position = 'absolute';
+            btnNo.style.left = `${newX}px`;
+            btnNo.style.top = `${newY}px`;
+        });
         </script>
 
     </body>
